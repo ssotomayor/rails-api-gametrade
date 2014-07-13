@@ -2,10 +2,16 @@ Rails.application.routes.draw do
   match '/user/create', to: 'account#create_user', via: 'post'
   match '/user/signin', to: 'account#signin', via: 'post'
   match '/user/signout', to: 'account#signout', via: 'post'
-  match '/user/:id', to: 'account#get_user_data', via: [:get, :post]
+  match '/user/add_game', to: 'account#add_game', via: [:get, :post]
   match '/user/modify/:modify', to: 'account#modify', via: [:get, :post]
+  match '/user/:username', to: 'account#get_user_data', via: [:get, :post]
 
   match '/games/create', to: 'games#create', via: [:get, :post]
+  match '/games/get_all', to: 'games#get_all', via: [:get, :post]
+  match '/games/modify', to: 'games#update', via: [:get, :post]
+
+  match '/device/create', to: 'device#create', via: [:get, :post]
+  match '/device/get_all', to: 'device#read', via: [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

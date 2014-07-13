@@ -13,4 +13,8 @@ class GamesController < ApplicationController
       render json: {error: 'Restricted Access'}
     end
   end
+
+  def get_all
+    render json: Game.all
+  end
 end
