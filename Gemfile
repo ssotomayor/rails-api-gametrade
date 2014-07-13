@@ -6,9 +6,7 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
-gem 'sqlite3'
-
-
+gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
